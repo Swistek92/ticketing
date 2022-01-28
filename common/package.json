@@ -1,6 +1,6 @@
 {
   "name": "@ps_tickets/common",
-  "version": "6.6.13",
+  "version": "6.6.15",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",

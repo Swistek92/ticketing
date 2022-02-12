@@ -6,6 +6,7 @@ import { natsWrapper } from '../../../nats-wrapper';
 import { Order } from '../../../models/order';
 
 const setup = async () => {
+  console.log(':)');
   const listener = new OrderCancelledListener(natsWrapper.client);
 
   const order = Order.build({

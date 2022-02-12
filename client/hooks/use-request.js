@@ -5,11 +5,11 @@ const useRequest = ({ url, method, body, onSuccess }) => {
   // method=== post get path
   const [errors, setErrors] = useState(null);
 
-  const doRequest = async () => {
+  const doRequest = async (props = {}) => {
     try {
       // console.log(url);
       setErrors(null);
-      const response = await axios[method](url, body);
+      const response = await axios[method](url, { ...body, ...props });
       // console.log(response);
 
       if (onSuccess) {

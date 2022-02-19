@@ -8,12 +8,6 @@ const buildClient = ({ req }) => {
       baseURL: 'http://www.ticketing-swistek-prod.xyz',
       headers: req.headers,
     });
-
-    // return axios.create({
-    //   baseURL:
-    //     'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
-    //   headers: req.headers,
-    // });
   } else {
     return axios.create({
       baseURL: '/',
@@ -23,3 +17,9 @@ const buildClient = ({ req }) => {
 };
 
 export default buildClient;
+
+// return axios.create({
+//   baseURL:
+//     'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
+//   headers: req.headers,
+// });
